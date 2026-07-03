@@ -1,0 +1,30 @@
+```gitignore
+# Real data files
+*.xlsx
+*.xlsm
+*.xls
+*.csv
+
+# Allow only sample files if needed
+!sample-data/input/weekly-incident-backlog-sample.xlsx
+
+# Environment/config files
+.env
+*.env
+config.local.json
+connections.json
+parameters.local.json
+
+# Power Automate export packages
+*.zip
+
+# Logs
+*.log
+logs/
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Temporary files
+~$*
