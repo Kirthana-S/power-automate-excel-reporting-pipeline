@@ -1,61 +1,210 @@
-# Power Automate Excel Reporting Pipeline
+# 📊 Weekly Incident Backlog Reporting Automation using Microsoft Power Automate
 
-## Overview
+Automated the end-to-end weekly incident backlog reporting process using Microsoft Power Automate, Office Scripts, SharePoint, and Outlook. The solution eliminates repetitive manual reporting tasks by automatically processing incoming reports, generating formatted outputs, and distributing summary emails to leadership.
 
-This project demonstrates an end-to-end reporting automation pipeline using Microsoft Power Automate, Outlook, SharePoint, Excel Office Scripts, and Power BI.
-
-The automation receives a weekly Excel report by email, saves it to SharePoint, processes the workbook using Office Scripts, creates a sendable report format, stores the final output in an Output folder, and optionally refreshes a Power BI dataset.
-
-> Note: This is a sanitized portfolio project. All company names, file paths, email addresses, report names, and mapping rules have been anonymized.
+> **Note:** This repository is a sanitized portfolio version of an enterprise automation solution. All company-specific information, email addresses, file names, SharePoint locations, and business logic have been replaced with sample content.
 
 ---
 
-## Business Problem
+# 🚀 Project Overview
 
-A recurring weekly report was previously processed manually:
+Business teams required a weekly incident backlog report to monitor aging incidents and share key metrics with leadership.
 
-1. Download Excel attachment from Outlook.
-2. Open the workbook.
-3. Run Excel macros.
-4. Create a sendable report format.
-5. Save final file with date.
-6. Email the report to team members.
-7. Refresh related dashboard/reporting assets.
+Previously, the reporting process involved manually:
 
-This process was repetitive, time-consuming, and dependent on manual execution.
+- Downloading the weekly backlog report
+- Saving the report to SharePoint
+- Running multiple Excel macros
+- Generating the final publish report
+- Counting aging incidents
+- Preparing summary emails
+- Attaching reports
+- Sending updates to leadership
+
+This automation streamlines the complete workflow using Microsoft Power Automate and Office Scripts.
 
 ---
 
-## Solution
+# 🎯 Business Problem
 
-The solution replaces manual Excel macro execution with a cloud-based automation pipeline:
+The existing reporting process was:
 
-```text
-Outlook Email
-    ↓
-Power Automate Cloud Flow
-    ↓
-Save Attachment to SharePoint Input Folder
-    ↓
-Run Office Script 1 - Process Raw Report
-    ↓
-Run Office Script 2 - Create Sendable Format
-    ↓
-Save Final File to SharePoint Output Folder
-    ↓
-Send Email Notification
-    ↓
-Optional Power BI Dataset Refresh
+- Time-consuming
+- Repetitive
+- Prone to manual errors
+- Dependent on human intervention every week
 
+The objective was to create an automated workflow that would reliably process the weekly report and notify stakeholders without manual effort.
 
-## Key Skills Demonstrated
+---
 
-- Workflow Automation
+# 💡 Solution
+
+The Power Automate flow performs the following tasks automatically:
+
+1. Trigger when the weekly backlog report email is received.
+2. Download the report attachment.
+3. Store the report in a SharePoint document library.
+4. Execute the first Office Script to process the raw data.
+5. Execute the second Office Script to generate the publish-ready report.
+6. Store the processed report in SharePoint.
+7. Retrieve the generated report.
+8. Generate a summary of aging incidents.
+9. Send an automated email to leadership with the processed report attached.
+
+---
+
+# 🔄 Workflow
+
+```
+Incoming Weekly Report Email
+            │
+            ▼
+Download Attachment
+            │
+            ▼
+Store in SharePoint
+            │
+            ▼
+Run Office Script #1
+(Process Raw Report)
+            │
+            ▼
+Run Office Script #2
+(Generate Publish Report)
+            │
+            ▼
+Store Final Report
+            │
+            ▼
+Generate Incident Summary
+            │
+            ▼
+Email Leadership Team
+```
+
+---
+
+# 🛠️ Technologies Used
+
 - Microsoft Power Automate
+- Microsoft Office Scripts
+- Microsoft Excel Online
+- Microsoft SharePoint Online
+- Microsoft Outlook
+- Microsoft 365
+
+---
+
+# 📁 Repository Structure
+
+```
+power-automate-weekly-reporting/
+
+│
+├── README.md
+├── LICENSE
+├── .gitignore
+│
+├── docs/
+│   ├── BusinessProblem.md
+│   └── Architecture.md
+│
+├── images/
+│   ├── flow.png
+│   ├── architecture.png
+│   └── email-sample.png
+│
+├── office-scripts/
+│   ├── Weekly_Backlog_Script_Sample.ts
+│   └── Publish_Report_Script_Sample.ts
+│
+├── sample-data/
+│   ├── Sample_Input.xlsx
+│   └── Sample_Output.xlsx
+│
+└── screenshots/
+```
+
+---
+
+# 📷 Workflow Screenshot
+
+> Add a sanitized screenshot of the Power Automate flow here.
+
+Example:
+
+```
+images/flow.png
+```
+
+---
+
+# 📈 Business Impact
+
+The automation delivered several operational improvements:
+
+- Reduced repetitive manual reporting effort
+- Standardized the weekly reporting process
+- Improved report consistency
+- Reduced the risk of manual errors
+- Automated report distribution to leadership
+- Centralized report storage in SharePoint
+
+---
+
+# 🔒 Security & Privacy
+
+To protect organizational confidentiality, this repository contains:
+
+- Sample Office Scripts
+- Sample Excel files
+- Generic workflow screenshots
+- Sanitized documentation
+
+The following have been intentionally removed:
+
+- Company names
+- Email addresses
+- SharePoint URLs
+- Internal report names
+- Folder structures
+- Business rules
+- Production Office Scripts
+
+---
+
+# 🚀 Future Enhancements
+
+Potential improvements include:
+
+- Microsoft Teams notifications
+- Power BI dashboard integration
+- AI-generated executive summaries
+- Exception handling and retry logic
+- Configurable reporting schedules
+- Enhanced monitoring and logging
+
+---
+
+
+
+# 📚 Learning Outcomes
+
+This project demonstrates experience with:
+
+- Business Process Automation
+- Workflow Design
+- Microsoft Power Platform
 - Office Scripts
 - SharePoint Integration
-- Excel Automation
-- Business Process Improvement
+- Enterprise Reporting Automation
 - Process Optimization
-- Enterprise Reporting
-- Microsoft 365
+
+---
+
+# 📄 Disclaimer
+
+This repository is intended for educational and portfolio purposes only.
+
+The original enterprise solution contained confidential business information and proprietary logic. All such information has been removed or replaced with sample content before publication.
