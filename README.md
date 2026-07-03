@@ -46,3 +46,16 @@ Save Final File to SharePoint Output Folder
 Send Email Notification
     ↓
 Optional Power BI Dataset Refresh
+
+
+## Key Skills Demonstrated
+
+- Workflow Automation
+- Microsoft Power Automate
+- Office Scripts
+- SharePoint Integration
+- Excel Automation
+- Business Process Improvement
+- Process Optimization
+- Enterprise Reporting
+- Microsoft 365
